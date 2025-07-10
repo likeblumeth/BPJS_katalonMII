@@ -27,22 +27,12 @@ LocalDate today = LocalDate.now()
 
 String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
 
-WebUI.callTestCase(findTestCase('Main Test Cases/RO/RO_AnalisaDataMandiri'), [('kodeBU') : GlobalVariable.kodeBU_bpstatistik_semarang], 
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), 0)
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
 
-if (WebUI.verifyElementPresent(findTestObject('Analisa Data Mandiri/popupLabelPerhatian'), 3, FailureHandling.OPTIONAL)) {
-    WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
-
-    WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
-
-    WebUI.click(findTestObject('Pemeriksaan - Perencanaan/radioButtonPerencanaan'))
-} else {
-    WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
-
-    WebUI.click(findTestObject('Pemeriksaan - Perencanaan/radioButtonPerencanaan'))
-}
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/radioButtonPerencanaan'))
 
 WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
