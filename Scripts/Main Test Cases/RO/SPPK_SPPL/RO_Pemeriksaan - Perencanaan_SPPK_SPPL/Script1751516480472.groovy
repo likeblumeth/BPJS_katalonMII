@@ -102,3 +102,5 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
 
+WebUI.closeBrowser()
+

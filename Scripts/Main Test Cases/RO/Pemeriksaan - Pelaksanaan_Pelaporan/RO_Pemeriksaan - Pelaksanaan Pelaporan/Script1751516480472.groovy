@@ -96,6 +96,8 @@ WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonProsesOuterTable'))
 
 WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonKembaliAfterProses'))
 
+WebUI.comment('Add Download File Here')
+
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
 WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonEditLHPS'))
