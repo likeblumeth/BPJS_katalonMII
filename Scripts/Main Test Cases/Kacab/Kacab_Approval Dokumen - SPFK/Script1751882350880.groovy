@@ -53,7 +53,7 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaa
 
 WebUI.scrollToElement(findTestObject('Approval - Perencanaan/buttonApproveSPPKSimpan'), 0)
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonUnduhSPFK'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhSPFK'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 

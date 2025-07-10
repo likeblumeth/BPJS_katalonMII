@@ -68,5 +68,3 @@ WebUI.scrollToElement(findTestObject('Analisa Data Mandiri/btnOkPopup'), 3)
 
 WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
 
-WebUI.closeBrowser()
-

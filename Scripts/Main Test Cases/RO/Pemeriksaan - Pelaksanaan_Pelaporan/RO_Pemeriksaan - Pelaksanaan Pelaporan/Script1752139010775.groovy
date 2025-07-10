@@ -33,7 +33,7 @@ WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'J
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'))
 
 WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
@@ -60,10 +60,10 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaa
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pelaksanaan - Pelaporan/textboxNomorBA'), (GlobalVariable.kodeBU_bpstatistik_semarang + 'BA') + 
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textboxNomorBA'), (GlobalVariable.kodeBU_bpstatistik_semarang + 'BA') + 
     formattedDate)
 
-WebUI.setText(findTestObject('Pelaksanaan - Pelaporan/textboxNomorSPHP'), (GlobalVariable.kodeBU_bpstatistik_semarang + 
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textboxNomorSPHP'), (GlobalVariable.kodeBU_bpstatistik_semarang + 
     'SPHP') + formattedDate)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
@@ -78,13 +78,13 @@ String filePath = projectPath + '/Pemadanan Data.xlsx'
 
 println(filePath)
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'))
 
-WebUI.uploadFile(findTestObject('Pelaksanaan - Pelaporan/buttonUpload_PelaksanaanPelaporan'), filePath)
+WebUI.uploadFile(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUpload_PelaksanaanPelaporan'), filePath)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonProsesExcel'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesExcel'))
 
 WebUI.delay(10)
 
@@ -92,21 +92,19 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
 
 WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonProsesOuterTable'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'))
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonKembaliAfterProses'))
-
-WebUI.comment('Add Download File Here')
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonKembaliAfterProses'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonEditLHPS'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonEditLHPS'))
 
-WebUI.setText(findTestObject('Pelaksanaan - Pelaporan/textareaPelaksanaanCatatanTemuan'), 'Tidakada')
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanCatatanTemuan'), 'Tidakada')
 
-WebUI.setText(findTestObject('Pelaksanaan - Pelaporan/textareaPelaksanaanTanggapanBA'), 'Tidakada12')
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanTanggapanBA'), 'Tidakada12')
 
-WebUI.setText(findTestObject('Pelaksanaan - Pelaporan/textareaRekomendasiPemeriksa'), 'Tidakada123')
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaRekomendasiPemeriksa'), 'Tidakada123')
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
 

@@ -23,10 +23,6 @@ import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 
 // Define today's date in the expected format (adjust format if needed)
-LocalDate today = LocalDate.now()
-
-String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
-
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -101,6 +97,4 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
-
-WebUI.closeBrowser()
 

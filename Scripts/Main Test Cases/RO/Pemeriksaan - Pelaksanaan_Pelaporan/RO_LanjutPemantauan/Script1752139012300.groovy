@@ -16,17 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
-WebUI.comment('Melalui SPPK dan SPFK beserta Approval')
 
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/radioButtonPerencanaan'))
 
 WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
@@ -49,26 +45,11 @@ TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core
 
 WebUI.waitForElementVisible(tableRow, 10)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'))
-
-	WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
-
-	WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
-	
-	Robot robot = new Robot();
-	
-			// Delay for a few seconds to allow time to switch to the desired window
-			Thread.sleep(2000);
-	
-			// Press Escape key
-			robot.keyPress(KeyEvent.VK_ESCAPE);
-			robot.keyRelease(KeyEvent.VK_ESCAPE);
-
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.scrollToElement(findTestObject('Pelaksanaan - Pelaporan/buttonLanjutPemantauan'), 0)
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonLanjutPelaksanaan'), 0)
 
-WebUI.click(findTestObject('Pelaksanaan - Pelaporan/buttonLanjutPemantauan'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonLanjutPelaksanaan'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'), FailureHandling.STOP_ON_FAILURE)
 

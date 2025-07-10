@@ -69,5 +69,3 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
 
 WebUI.comment('Next Perlu Approval_SPFPK_Peringatan Kabag dan Kacab')
 
-WebUI.closeBrowser()
-

@@ -16,29 +16,33 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebElement as WebElement
+import java.time.LocalDate as LocalDate
+import java.time.format.DateTimeFormatter as DateTimeFormatter
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 
-WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab2'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
+// Define today's date in the expected format (adjust format if needed)
+LocalDate today = LocalDate.now()
+
+String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
+
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Approval - Perencanaan/buttonExpandApprovalPerencanaan'))
+WebUI.click(findTestObject('Sanksi/sidemenuExpandSanksi'))
 
-WebUI.click(findTestObject('Approval - Perencanaan/radioButtonApproveDokumenSPPK_SPPL'))
+WebUI.click(findTestObject('Sanksi/radiobuttonSanksiTeguran1'))
 
-WebUI.click(findTestObject('Approval - Perencanaan/datepickerPeriodePeriksa'))
-
-WebUI.comment('Gunakan DatePicker Periode')
+WebUI.click(findTestObject('Inquiry Data/Periode/parentdatePickerPeriode'))
 
 WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
-
-TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
-
-WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'))
 
@@ -58,13 +62,7 @@ robot.keyRelease(KeyEvent.VK_ESCAPE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.scrollToElement(findTestObject('Approval - Perencanaan/buttonApproveSPPKSimpan'), 0)
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
 
-WebUI.click(findTestObject('Approval - Perencanaan/buttonApproveSPPKSimpan'))
-
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
-
-WebUI.scrollToElement(findTestObject('Analisa Data Mandiri/btnOkPopup'), 3)
-
-WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
+WebUI.comment('Buat Approval kabag dan Kacab')
 

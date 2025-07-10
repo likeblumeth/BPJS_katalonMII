@@ -17,43 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('Melalui SPPK dan SPFK beserta Approval')
-
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Approval - Pelaksanaan/sideMenuApprovePelaksanaanLaporan'))
+WebUI.click(findTestObject('Sanksi/sidemenuExpandSanksi'))
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'))
+WebUI.click(findTestObject('Sanksi/radiobuttonSanksiTeguran1'))
 
-WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
+WebUI.click(findTestObject('Inquiry Data/Periode/parentdatePickerPeriode'))
 
-WebUI.delay(5)
-
-WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
-
-WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_bpstatistik_semarang, 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
-
-WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'))
+WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
 
-TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
-
-WebUI.waitForElementVisible(tableRow, 10)
-
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonLanjutPemantauan'), 0)
-
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonLanjutPemantauan'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'), FailureHandling.STOP_ON_FAILURE)
+WebUI.comment('button update, dropdown patuh ambil dari pemeriksaan pemantauan saja')
 
