@@ -1,6 +1,8 @@
 import com.katalon.KatalonHelper
 import com.kms.katalon.core.annotation.BeforeTestSuite
 import com.kms.katalon.core.context.TestSuiteContext
+import java.time.LocalDate as LocalDate
+import java.time.format.DateTimeFormatter as DateTimeFormatter
 
 class TestListener {
 	/**
@@ -9,6 +11,11 @@ class TestListener {
 	 */
 	@BeforeTestSuite
 	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
+		
+		LocalDate today = LocalDate.now()
+		
+		String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
+		
 		KatalonHelper.updateInfo()
 	}
 }

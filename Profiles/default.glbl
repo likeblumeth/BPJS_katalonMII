@@ -7,16 +7,29 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>10</initValue>
-      <name>G_Timeout</name>
+      <name>Timeout</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://demoaut.katalon.com'</initValue>
-      <name>G_SiteURL</name>
+      <initValue>'https://qc167.bpjs-kesehatan.go.id/awasrik/Home/Index'</initValue>
+      <name>urlAwasrik</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>5</initValue>
-      <name>G_ShortTimeOut</name>
+      <initValue>'01732290'</initValue>
+      <name>kodeBU_unicef</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'01732701'</initValue>
+      <name>kodeBU_bpstatistik_semarang</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

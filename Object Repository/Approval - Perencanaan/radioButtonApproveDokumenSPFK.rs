@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>radioButtonApproveDokumenSPFK</name>
+   <tag></tag>
+   <elementGuidId>9c01c849-7ed5-4181-aaae-10ac8eee6936</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@href='https://qc167.bpjs-kesehatan.go.id/awasrik/Approval/Approval_SPFPK_Peringatan']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>

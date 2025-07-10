@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Kacab_Approval Perencanaan - Approve Dokumen SPPK</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>63a04fd2-d0ce-463f-894a-18a6d98ffa0d</testCaseGuid>
+</TestCaseEntity>

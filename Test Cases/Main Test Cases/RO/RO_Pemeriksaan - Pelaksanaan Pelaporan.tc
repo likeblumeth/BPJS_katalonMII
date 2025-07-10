@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pemeriksaan - Pelaksanaan Pelaporan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f9fef5ed-4372-4876-b26f-c9a083404575</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7318f3ed-edfd-40e2-8153-fd67e67144bd</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7318f3ed-edfd-40e2-8153-fd67e67144bd</id>
+      <masked>false</masked>
+      <name>kodeBU</name>
+   </variable>
+</TestCaseEntity>

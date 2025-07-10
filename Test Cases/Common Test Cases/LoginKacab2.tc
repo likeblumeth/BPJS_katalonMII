@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Common test case used to login. &#xd;
+Steps:&#xd;
+- Click on 'Book Appointment' button to login&#xd;
+- Input username and password&#xd;
+- Click on 'Login' button&#xd;
+&#xd;
+Expected result:&#xd;
+'Appointment' section is displayed after successful login</description>
+   <name>LoginKacab2</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ddd9c536-58c3-44ad-a564-22853431fa26</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4369afd7-5db5-4f6b-913a-d4d99e4d69ee</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>82773622-6af2-4e67-b365-1f1bd1aa14d9</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'John Doe'</defaultValue>
+      <description></description>
+      <id>4369afd7-5db5-4f6b-913a-d4d99e4d69ee</id>
+      <masked>false</masked>
+      <name>Username</name>
+   </variable>
+   <variable>
+      <defaultValue>'ThisIsNotAPassword'</defaultValue>
+      <description></description>
+      <id>82773622-6af2-4e67-b365-1f1bd1aa14d9</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+</TestCaseEntity>
