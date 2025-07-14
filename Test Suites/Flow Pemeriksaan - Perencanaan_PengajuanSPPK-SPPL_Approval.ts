@@ -12,6 +12,19 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>6c50376e-6e21-403c-a9d3-d1067fd94a46</testSuiteGuid>
    <testCaseLink>
+      <guid>6fd32366-ee98-4741-b48c-0683277f1bf5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Main Test Cases/RO/RO_AnalisaDataMandiri</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>fe378111-6395-444e-bd78-5605173bdd0d</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>ec13a826-7522-4cd7-9fa1-a6e93e5ee728</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -63,7 +76,7 @@
       <guid>9bdb328c-d4e2-4fe9-b8ea-67da870b689f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Main Test Cases/RO/SPFK/RO_LanjutPelaksanaan</testCaseId>
+      <testCaseId>Test Cases/Main Test Cases/RO/SPFK/RO_Perencanaan-LanjutPelaksanaan</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -97,7 +110,35 @@
       <guid>b68d7831-f080-4fff-a90c-5a2a94d6f84c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Main Test Cases/RO/Pemeriksaan - Pelaksanaan_Pelaporan/RO_LanjutPemantauan</testCaseId>
+      <testCaseId>Test Cases/Main Test Cases/RO/Pemeriksaan - Pelaksanaan_Pelaporan/RO_Pelaksanaan-LanjutPemantauan</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2c9a61c2-dfd1-41b3-a00a-1bc4de6d49bc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Main Test Cases/RO/Pemeriksaan - Pemantauan/RO_Pemeriksaan - Pemantauan</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6f274b33-d55d-41cd-a6a6-7ae0aa549267</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Main Test Cases/RO/Sanksi - Teguran 1/RO_Sanksi - Dokumen Teguran 1</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>28a67987-bba9-4834-859a-d249c98e4af9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Main Test Cases/Kabag/Kabag_Approval PemantauanSanksi - Dokumen Teguran 1</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>23b2666c-82f4-4ef5-890f-80ab5f973851</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Main Test Cases/Kacab/Kacab_Approval PemantauanSanksi - Dokumen Teguran 1</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

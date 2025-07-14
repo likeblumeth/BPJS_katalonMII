@@ -27,15 +27,8 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'01732701'</initValue>
-      <name>kodeBU_bpstatistik_semarang</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'01735022'</initValue>
-      <name>kodeBU_KspKaryaMitraMaju</name>
+      <initValue>'01732290'</initValue>
+      <name>kodeBU_Global</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

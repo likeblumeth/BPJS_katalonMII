@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>buttonEditTabelRowPerencanaan</name>
+   <name>ElementScrollTable</name>
    <tag></tag>
-   <elementGuidId>a660fa9a-640c-4128-85be-7e710e05b73e</elementGuidId>
+   <elementGuidId>0dd93fa3-54ea-4924-98a3-ede989700a98</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//i[contains(@class, 'fa-edit')])</value>
+         <value>//div[contains(@class, 'dt-scroll-body')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -16,8 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+import java.awt.Robot as Robot
+import java.awt.event.KeyEvent as KeyEvent
 
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginKabag'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -46,14 +46,15 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 
-Robot robot = new Robot();
+Robot robot = new Robot()
 
-		// Delay for a few seconds to allow time to switch to the desired window
-		Thread.sleep(2000);
+// Delay for a few seconds to allow time to switch to the desired window
+Thread.sleep(3000)
 
-		// Press Escape key
-		robot.keyPress(KeyEvent.VK_ESCAPE);
-		robot.keyRelease(KeyEvent.VK_ESCAPE);
+// Press Escape key
+robot.keyPress(KeyEvent.VK_ESCAPE)
+
+robot.keyRelease(KeyEvent.VK_ESCAPE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 

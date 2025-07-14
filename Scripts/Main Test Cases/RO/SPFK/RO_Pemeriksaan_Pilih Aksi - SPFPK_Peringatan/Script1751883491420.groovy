@@ -38,8 +38,7 @@ WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
 WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
 
-WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_bpstatistik_semarang, 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_Global, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
@@ -55,6 +54,12 @@ WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
+for (def index : (0..5)) {
+    WebUI.sendKeys(findTestObject('Pemeriksaan - Perencanaan/buttonAksiTabel'), Keys.chord(Keys.TAB))
+}
+
+WebUI.waitForElementClickable(findTestObject('Pemeriksaan - Perencanaan/buttonAksiTabel'), 0)
+
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAksiTabel'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAksiHistoryPemeriksaan'))
@@ -64,6 +69,18 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonTutupPopup'))
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAksiTabel'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAksiSPFPK_PeringatanProses'))
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
+
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSPPKorSPFK'), '2', false)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
+
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 5)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
 

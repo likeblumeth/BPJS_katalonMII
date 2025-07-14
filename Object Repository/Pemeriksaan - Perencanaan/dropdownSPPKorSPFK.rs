@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>buttonEditTabelRowPerencanaan</name>
+   <name>dropdownSPPKorSPFK</name>
    <tag></tag>
-   <elementGuidId>a660fa9a-640c-4128-85be-7e710e05b73e</elementGuidId>
+   <elementGuidId>5e61ea11-2603-4a0b-b64f-d87edce488d1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//select[@id='aksi']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//i[contains(@class, 'fa-edit')])</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -23,6 +23,12 @@ import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 
 // Define today's date in the expected format (adjust format if needed)
+
+LocalDate today = LocalDate.now()
+
+String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
+
+
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -34,8 +40,7 @@ WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
 WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
 
-WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_bpstatistik_semarang, 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_Global, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
@@ -53,8 +58,11 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaa
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxSPT'), (GlobalVariable.kodeBU_bpstatistik_semarang + 'SPT') + 
-    formattedDate)
+inputTextBoxSPT = ((GlobalVariable.kodeBU_Global + 'SPT') + formattedDate)
+
+println(inputTextBoxSPT)
+
+WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxSPT'), (GlobalVariable.kodeBU_Global + 'SPT') + formattedDate)
 
 WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxSusunanTim'), '03864')
 
@@ -88,7 +96,7 @@ WebUI.delay(10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSPPKorSPPL'), '1', false)
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSPPKorSPFK'), '1', false)
 
 WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 5)
 

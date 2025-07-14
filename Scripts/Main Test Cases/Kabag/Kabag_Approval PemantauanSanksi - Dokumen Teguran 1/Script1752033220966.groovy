@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab2'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginKabag'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Approval - Pemantauan Sanksi/sidemenuExpand_ApprovalPemantauan'))

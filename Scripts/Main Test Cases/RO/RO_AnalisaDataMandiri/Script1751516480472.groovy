@@ -21,8 +21,8 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.WebElement as WebElement
 import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+import java.awt.Robot as Robot
+import java.awt.event.KeyEvent as KeyEvent
 
 // Define today's date in the expected format (adjust format if needed)
 LocalDate today = LocalDate.now()
@@ -35,9 +35,9 @@ try {
 
     WebUI.click(findTestObject('Analisa Data Mandiri/MenuAnalisaDataMandiri'))
 
-    WebUI.setText(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), GlobalVariable.kodeBU_bpstatistik_semarang)
+    WebUI.setText(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), GlobalVariable.kodeBU_Global)
 
-    println(GlobalVariable.kodeBU_bpstatistik_semarang)
+    println(GlobalVariable.kodeBU_Global)
 
     WebElement btnCari = WebUiCommonHelper.findWebElement(findTestObject('Pengawasan - Canvassing/btnCariGreen'), 10)
 
@@ -70,15 +70,16 @@ try {
     WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
 
     WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
-	
-	Robot robot = new Robot();
-	
-			// Delay for a few seconds to allow time to switch to the desired window
-			Thread.sleep(2000);
-	
-			// Press Escape key
-			robot.keyPress(KeyEvent.VK_ESCAPE);
-			robot.keyRelease(KeyEvent.VK_ESCAPE);
+
+    Robot robot = new Robot()
+
+    // Delay for a few seconds to allow time to switch to the desired window
+    Thread.sleep(2000)
+
+    // Press Escape key
+    robot.keyPress(KeyEvent.VK_ESCAPE)
+
+    robot.keyRelease(KeyEvent.VK_ESCAPE)
 }
 catch (Exception e) {
     WebUI.comment('⚠️ An error occurred: ' + e.getMessage())
