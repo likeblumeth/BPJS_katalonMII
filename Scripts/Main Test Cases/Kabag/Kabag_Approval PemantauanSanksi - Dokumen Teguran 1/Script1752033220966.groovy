@@ -36,17 +36,21 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSele
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
 
-WebUI.takeScreenshot()
-
 WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeWindowIndex(1, FailureHandling.STOP_ON_FAILURE)
+WebUI.switchToWindowIndex(1)
 
-WebUI.switchToWindowIndex(0, FailureHandling.STOP_ON_FAILURE)
+WebUI.takeFullPageScreenshot()
+
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.takeScreenshot()
 
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 

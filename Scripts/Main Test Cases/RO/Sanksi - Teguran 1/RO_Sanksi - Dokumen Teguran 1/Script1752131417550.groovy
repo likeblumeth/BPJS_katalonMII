@@ -53,11 +53,15 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STO
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
 
+WebUI.switchToWindowIndex(1)
+
+WebUI.takeFullPageScreenshot()
+
 WebUI.closeWindowIndex(1)
 
 WebUI.switchToWindowIndex(0)
 
-WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
+WebUI.takeScreenshot()
 
 //Get Dynamic Object untuk Pilih Tabel By Global Variable
 String dynamicXpath = ('//table[@id=\'tblCari\']//tbody//td[contains(@class,\'dt-type-numeric\') and text()=\'' + GlobalVariable.kodeBU_Global) + 

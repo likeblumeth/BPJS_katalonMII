@@ -49,6 +49,10 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 
+WebUI.switchToWindowIndex(1)
+
+WebUI.takeFullPageScreenshot()
+
 WebUI.closeWindowIndex(1)
 
 WebUI.switchToWindowIndex(0)

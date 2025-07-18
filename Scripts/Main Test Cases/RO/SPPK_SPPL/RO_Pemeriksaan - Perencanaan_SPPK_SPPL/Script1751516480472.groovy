@@ -58,6 +58,22 @@ WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'))
+
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
+
+WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
+
+WebUI.switchToWindowIndex(1)
+
+WebUI.takeFullPageScreenshot()
+
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.waitForElementVisible(findTestObject('Inquiry Data/btnDownloadPDF-Print'), 0)
+
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
 inputTextBoxSPT = ((GlobalVariable.kodeBU_Global + 'SPT') + formattedDate)

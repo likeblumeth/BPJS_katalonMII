@@ -70,11 +70,15 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSele
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari_1'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Excel'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_CSV'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Print'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.switchToWindowIndex(1)
+
+WebUI.takeFullPageScreenshot()
 
 WebUI.closeWindowIndex(1)
 

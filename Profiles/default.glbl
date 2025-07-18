@@ -20,14 +20,14 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'01732702'</initValue>
+      <initValue>'01732703'</initValue>
       <name>kodeBU_backup</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'01732299'</initValue>
+      <initValue>'01732301'</initValue>
       <name>kodeBU_Global</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
