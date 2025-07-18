@@ -4,12 +4,12 @@
    <name>test</name>
    <tag></tag>
    <UUID>90360d10-95f5-45cb-bcfa-588c6ea87785</UUID>
-   <freeLicense>true</freeLicense>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
-   <modifiedEdition>FREE</modifiedEdition>
-   <modifiedVersion>10.2.0</modifiedVersion>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedVersion>10.2.3</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>C:\Users\BillyBu\Katalon Studio\Awasrik BPJS\test.prj</projectFileLocation>
+   <projectFileLocation>D:\Kerja - MII\BPJS\BPJS Clone GIT\BPJS_katalonMII\test.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

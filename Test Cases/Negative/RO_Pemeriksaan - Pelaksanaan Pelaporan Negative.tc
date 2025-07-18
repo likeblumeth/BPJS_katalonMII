@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pemeriksaan - Pelaksanaan Pelaporan Negative</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3890e731-171a-46f5-a729-89102c52efec</testCaseGuid>
+</TestCaseEntity>
