@@ -19,8 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 
-WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab2'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Approval - Perencanaan/buttonExpandApprovalPerencanaan'))
 
@@ -36,6 +35,8 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSele
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
 
+WebUI.takeScreenshot()
+
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 
 WebUI.waitForElementVisible(tableRow, 10)
@@ -46,15 +47,11 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 
-Robot robot = new Robot()
+WebUI.closeWindowIndex(1)
 
-// Delay for a few seconds to allow time to switch to the desired window
-Thread.sleep(2000)
+WebUI.switchToWindowIndex(0)
 
-// Press Escape key
-robot.keyPress(KeyEvent.VK_ESCAPE)
-
-robot.keyRelease(KeyEvent.VK_ESCAPE)
+WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
@@ -67,4 +64,6 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 WebUI.scrollToElement(findTestObject('Analisa Data Mandiri/btnOkPopup'), 3)
 
 WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
+
+WebUI.takeScreenshot()
 

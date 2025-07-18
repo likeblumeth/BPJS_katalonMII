@@ -6,17 +6,4 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>9765abf4-5c40-4d11-91e0-969d3f502c2f</testCaseGuid>
-   <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
-      <variableId>07ae0088-df28-4ff1-a170-0b8731d0d316</variableId>
-   </variableLinks>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>07ae0088-df28-4ff1-a170-0b8731d0d316</id>
-      <masked>false</masked>
-      <name>kodeBU</name>
-   </variable>
 </TestCaseEntity>

@@ -31,6 +31,8 @@ WebUI.setText(findTestObject('Login Page/Username'), '09004')
 
 WebUI.setText(findTestObject('Login Page/Password'), 'Qwerty1!')
 
+WebUI.takeScreenshot()
+
 WebUI.delay(5)
 
 WebUI.click(findTestObject('Login Page/BtnLogin'))
@@ -38,4 +40,6 @@ WebUI.click(findTestObject('Login Page/BtnLogin'))
 WebUI.comment('Tolong Disable Captcha Baru bisa di automate')
 
 WebUI.verifyElementPresent(findTestObject('btnProfileHomeScreen'), 0)
+
+WebUI.takeScreenshot()
 

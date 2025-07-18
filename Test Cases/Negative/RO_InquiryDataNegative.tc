@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_InquiryDataNegative</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6638c41e-9802-4364-b489-6545ded7ee2f</testCaseGuid>
+</TestCaseEntity>

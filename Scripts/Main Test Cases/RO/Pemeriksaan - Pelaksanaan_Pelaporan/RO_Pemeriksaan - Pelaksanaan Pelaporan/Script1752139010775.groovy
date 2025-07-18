@@ -31,45 +31,49 @@ println(formattedDate)
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
+WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(5)
+WebUI.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
+WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_Global, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
+WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'))
+WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
+WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 
-WebUI.waitForElementVisible(tableRow, 10)
+WebUI.waitForElementVisible(tableRow, 10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), 0)
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), 0, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textboxNomorBA'), (GlobalVariable.kodeBU_Global + 'BA') + 
-    formattedDate)
+    formattedDate, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textboxNomorSPHP'), (GlobalVariable.kodeBU_Global + 
-    'SPHP') + formattedDate)
+    'SPHP') + formattedDate, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'), FailureHandling.STOP_ON_FAILURE)
 
 // Declare and assign the project path first
 String projectPath = RunConfiguration.getProjectDir()
@@ -79,57 +83,69 @@ String filePath = projectPath + '/Pemadanan Data.xlsx'
 
 println(filePath)
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'), 0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnggahPelaksanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.uploadFile(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUpload_PelaksanaanPelaporan'), filePath, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.uploadFile(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUpload_PelaksanaanPelaporan'), filePath, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(2, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.delay(2, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesExcel'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesExcel'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.delay(10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), 0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), 0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonUnduhPelaksanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), 10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonKembaliAfterProses'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), 10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonProsesOuterTable'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonHapusPelaksanaan'), 0)
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonEditLHPS'))
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonKembaliAfterProses'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanCatatanTemuan'), 'Tidakada')
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanTanggapanBA'), 'Tidakada12')
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonHapusPelaksanaan'), 0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaRekomendasiPemeriksa'), 'Tidakada123')
+WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonEditLHPS'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanCatatanTemuan'), 'Tidakada', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaPelaksanaanTanggapanBA'), 'Tidakada12', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
+WebUI.setText(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/textareaRekomendasiPemeriksa'), 'Tidakada123', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 

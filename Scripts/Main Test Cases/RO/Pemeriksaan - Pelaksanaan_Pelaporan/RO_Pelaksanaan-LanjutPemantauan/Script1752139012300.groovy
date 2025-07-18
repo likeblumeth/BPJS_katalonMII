@@ -40,6 +40,8 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSele
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
 
+WebUI.takeScreenshot()
+
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 
 WebUI.waitForElementVisible(tableRow, 10)
@@ -53,4 +55,6 @@ WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/buttonLanjutPe
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot()
 

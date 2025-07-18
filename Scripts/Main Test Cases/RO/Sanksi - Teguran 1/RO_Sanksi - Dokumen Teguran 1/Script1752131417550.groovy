@@ -23,6 +23,7 @@ import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 // Define today's date in the expected format (adjust format if needed)
 LocalDate today = LocalDate.now()
@@ -32,37 +33,55 @@ String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sanksi/sidemenuExpandSanksi'))
+WebUI.click(findTestObject('Sanksi/sidemenuExpandSanksi'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sanksi/radiobuttonSanksiTeguran1'))
+WebUI.click(findTestObject('Sanksi/radiobuttonSanksiTeguran1'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/Periode/parentdatePickerPeriode'))
+WebUI.click(findTestObject('Inquiry Data/Periode/parentdatePickerPeriode'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
+WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
+WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'))
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STOP_ON_FAILURE)
 
-Robot robot = new Robot()
+WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
 
-// Delay for a few seconds to allow time to switch to the desired window
-Thread.sleep(2000)
+WebUI.closeWindowIndex(1)
 
-// Press Escape key
-robot.keyPress(KeyEvent.VK_ESCAPE)
+WebUI.switchToWindowIndex(0)
 
-robot.keyRelease(KeyEvent.VK_ESCAPE)
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
+//Get Dynamic Object untuk Pilih Tabel By Global Variable
+String dynamicXpath = ('//table[@id=\'tblCari\']//tbody//td[contains(@class,\'dt-type-numeric\') and text()=\'' + GlobalVariable.kodeBU_Global) + 
+'\']'
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
+println(dynamicXpath)
+
+TestObject dynamicCell = new TestObject('dynamicCell')
+
+dynamicCell.addProperty('xpath', ConditionType.EQUALS, dynamicXpath)
+
+WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.scrollToElement(dynamicCell, 0)
+
+WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 0, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot(FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.comment('Buat Approval kabag dan Kacab')
 

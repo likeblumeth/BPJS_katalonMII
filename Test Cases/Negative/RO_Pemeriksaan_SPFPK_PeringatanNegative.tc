@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pemeriksaan_SPFPK_PeringatanNegative</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8ccd3c2a-26b9-4e07-b653-67d9fb7d17f1</testCaseGuid>
+</TestCaseEntity>

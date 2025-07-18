@@ -19,5 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.click(findTestObject('btnProfileHomeScreen'))
 
+WebUI.takeScreenshot()
+
 WebUI.click(findTestObject('btnLogout'))
 

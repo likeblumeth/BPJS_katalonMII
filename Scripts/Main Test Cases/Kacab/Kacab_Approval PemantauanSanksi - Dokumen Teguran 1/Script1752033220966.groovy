@@ -16,9 +16,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import java.awt.Robot as Robot
+import java.awt.event.KeyEvent as KeyEvent
 
-WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab2'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Approval - Pemantauan Sanksi/sidemenuExpand_ApprovalPemantauan'))
 
@@ -33,6 +34,16 @@ WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
+
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowIndex(0)
 
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 

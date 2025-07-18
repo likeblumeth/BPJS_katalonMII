@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_LoginError</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d8d4a2d8-602e-4a83-9cbf-1349a41a3bde</testCaseGuid>
+</TestCaseEntity>

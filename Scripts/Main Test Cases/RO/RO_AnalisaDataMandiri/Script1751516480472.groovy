@@ -47,6 +47,10 @@ try {
 
     WebUI.waitForElementVisible(tableRow, 10)
 
+    WebUI.comment('Take Screenshot Tabel')
+
+    WebUI.takeScreenshot()
+
     WebUI.click(findTestObject('Pengawasan - Canvassing/btnEditCanvassingRow1'))
 
     WebUI.waitForElementPresent(findTestObject('Pengawasan - Canvassing/lblEditRecord'), 5)
@@ -71,15 +75,13 @@ try {
 
     WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 
-    Robot robot = new Robot()
+    WebUI.closeWindowIndex(1)
 
-    // Delay for a few seconds to allow time to switch to the desired window
-    Thread.sleep(2000)
+    WebUI.switchToWindowIndex(0)
 
-    // Press Escape key
-    robot.keyPress(KeyEvent.VK_ESCAPE)
+    WebUI.waitForElementVisible(findTestObject('Inquiry Data/btnDownloadPDF-Print'), 0)
 
-    robot.keyRelease(KeyEvent.VK_ESCAPE)
+    WebUI.focus(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 }
 catch (Exception e) {
     WebUI.comment('⚠️ An error occurred: ' + e.getMessage())

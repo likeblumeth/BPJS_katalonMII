@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab2'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
+WebUI.callTestCase(findTestCase('null'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Approval - Perencanaan/buttonExpandApprovalPerencanaan'))

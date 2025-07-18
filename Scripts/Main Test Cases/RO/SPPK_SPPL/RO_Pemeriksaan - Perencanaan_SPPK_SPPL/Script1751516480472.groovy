@@ -23,14 +23,14 @@ import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 
 // Define today's date in the expected format (adjust format if needed)
-
 LocalDate today = LocalDate.now()
 
 String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
 
-
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
 
@@ -49,6 +49,8 @@ WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'))
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
+
+WebUI.takeScreenshot()
 
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 
@@ -84,6 +86,8 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownMeto
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownJenisTidakPatuh'), '3', false)
 
+WebUI.takeScreenshot()
+
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
@@ -101,6 +105,8 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSPPK
 WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 5)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
+
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 

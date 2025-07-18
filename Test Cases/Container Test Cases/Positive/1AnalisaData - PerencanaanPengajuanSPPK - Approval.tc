@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Flow 1</description>
+   <name>1AnalisaData - PerencanaanPengajuanSPPK - Approval</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e39fae31-017b-4775-b689-df01ae597773</testCaseGuid>
+</TestCaseEntity>

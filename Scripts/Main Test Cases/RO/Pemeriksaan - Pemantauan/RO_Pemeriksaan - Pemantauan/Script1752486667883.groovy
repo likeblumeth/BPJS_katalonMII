@@ -20,7 +20,9 @@ import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
-import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebElement as WebElement
 
 // Define today's date in the expected format (adjust format if needed)
 LocalDate today = LocalDate.now()
@@ -33,20 +35,21 @@ println(todayDate)
 
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemeriksaan'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemeriksaan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemantauan'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemantauan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Badan Usaha_btnSearchBU'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Badan Usaha_btnSearchBU'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/select_Nama BUKode BU'), '2', 
-    true)
+    true, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/input_Opsi Pencarian_paramCariBU'), GlobalVariable.kodeBU_Global)
+WebUI.setText(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/input_Opsi Pencarian_paramCariBU'), GlobalVariable.kodeBU_Global, 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Pilih'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Pilih'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/input_Tanggal Pemeriksaan_periode'), FailureHandling.STOP_ON_FAILURE)
 
@@ -55,48 +58,54 @@ String DynamicDatePicker = ('//div[contains(@class, \'datepicker-days\')]//td[@c
 
 println(DynamicDatePicker)
 
-// 3. Create TestObject with dynamic XPath
 TestObject dynamicDate = new TestObject('dynamicDate')
-dynamicDate.addProperty("xpath", ConditionType.EQUALS, DynamicDatePicker)
 
-// 4. Wait for element (optional, but recommended)
-WebUI.waitForElementClickable(dynamicDate, 10)
+dynamicDate.addProperty('xpath', ConditionType.EQUALS, DynamicDatePicker)
 
-// 5. Click the date
-WebUI.click(dynamicDate)
+WebUI.waitForElementClickable(dynamicDate, 10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari_1'))
+WebUI.click(dynamicDate, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Excel'))
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_CSV'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari_1'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Print'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Excel'), FailureHandling.STOP_ON_FAILURE)
 
-Robot robot = new Robot()
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_CSV'), FailureHandling.STOP_ON_FAILURE)
 
-// Delay for a few seconds to allow time to switch to the desired window
-Thread.sleep(2000)
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/span_Print'), FailureHandling.STOP_ON_FAILURE)
 
-// Press Escape key
-robot.keyPress(KeyEvent.VK_ESCAPE)
+WebUI.closeWindowIndex(1)
 
-robot.keyRelease(KeyEvent.VK_ESCAPE)
+WebUI.switchToWindowIndex(0)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cek Ulang'))
+WebUI.takeScreenshot()
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_XLS'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cek Ulang'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Kembali'))
+WebUI.takeScreenshot()
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Unduh'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_XLS'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Update'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Kembali'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Unduh'), 5, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Unduh'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot()
+
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Update'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot()
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/select_PatuhPatuh Dengan CatatanTidak Patuh'), 
-    '3', true)
+    '3', true, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Simpan'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Simpan'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_OK'))
+WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_OK'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.takeScreenshot()
 

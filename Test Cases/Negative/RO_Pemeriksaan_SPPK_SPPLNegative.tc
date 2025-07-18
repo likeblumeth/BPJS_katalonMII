@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pemeriksaan_SPPK_SPPLNegative</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2aebf499-0354-4468-ad06-036679b71cac</testCaseGuid>
+</TestCaseEntity>

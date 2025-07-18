@@ -36,6 +36,8 @@ WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSele
 
 WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
 
+WebUI.takeScreenshot()
+
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 
 WebUI.waitForElementVisible(tableRow, 10)
@@ -46,15 +48,11 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
 
-Robot robot = new Robot()
+WebUI.closeWindowIndex(1, FailureHandling.STOP_ON_FAILURE)
 
-// Delay for a few seconds to allow time to switch to the desired window
-Thread.sleep(2000)
+WebUI.switchToWindowIndex(0, FailureHandling.STOP_ON_FAILURE)
 
-// Press Escape key
-robot.keyPress(KeyEvent.VK_ESCAPE)
-
-robot.keyRelease(KeyEvent.VK_ESCAPE)
+WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
@@ -67,4 +65,6 @@ WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
 WebUI.scrollToElement(findTestObject('Analisa Data Mandiri/btnOkPopup'), 3)
 
 WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
+
+WebUI.takeScreenshot()
 

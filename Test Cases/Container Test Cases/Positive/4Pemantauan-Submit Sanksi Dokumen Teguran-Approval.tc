@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Flow 4</description>
+   <name>4Pemantauan-Submit Sanksi Dokumen Teguran-Approval</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8a0a9f0f-9363-48ee-b56c-c730c6aaf538</testCaseGuid>
+</TestCaseEntity>

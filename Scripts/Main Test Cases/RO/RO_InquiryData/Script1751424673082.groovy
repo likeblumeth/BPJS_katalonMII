@@ -52,7 +52,7 @@ WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
 WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
 
-WebUI.setText(findTestObject('Inquiry Data/textBoxMasukkanKataPencarian'), '01732290')
+WebUI.setText(findTestObject('Inquiry Data/textBoxMasukkanKataPencarian'), GlobalVariable.kodeBU_Global)
 
 WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
