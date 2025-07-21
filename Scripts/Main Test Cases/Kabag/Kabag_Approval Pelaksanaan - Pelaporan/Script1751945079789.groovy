@@ -40,15 +40,19 @@ TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core
 
 WebUI.waitForElementVisible(tableRow, 10)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'))
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoExcel'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'))
+WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'))
+WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeWindowIndex(1, FailureHandling.STOP_ON_FAILURE)
+WebUI.switchToWindowIndex(1)
 
-WebUI.switchToWindowIndex(0, FailureHandling.STOP_ON_FAILURE)
+WebUI.takeFullPageScreenshot()
+
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowIndex(0)
 
 WebUI.waitForElementVisible(tableRow, 10)
 

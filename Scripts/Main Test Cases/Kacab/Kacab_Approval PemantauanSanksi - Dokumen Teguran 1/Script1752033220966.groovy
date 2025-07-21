@@ -41,9 +41,15 @@ WebUI.click(findTestObject('Inquiry Data/btnDownloadtoCSV'), FailureHandling.STO
 
 WebUI.click(findTestObject('Inquiry Data/btnDownloadPDF-Print'), FailureHandling.STOP_ON_FAILURE)
 
+WebUI.switchToWindowIndex(1)
+
+WebUI.takeFullPageScreenshot()
+
 WebUI.closeWindowIndex(1)
 
 WebUI.switchToWindowIndex(0)
+
+WebUI.takeScreenshot()
 
 TestObject tableRow = new TestObject().addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, '//td[contains(text(),\'017\')]')
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Flow 3</description>
-   <name>3PelaksanaanPelaporan-Approval-LanjutPemantauan</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>b9d47b04-7b2c-4839-a1e4-bfa0c0efad52</testCaseGuid>
-</TestCaseEntity>

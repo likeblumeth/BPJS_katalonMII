@@ -37,3 +37,5 @@ WebUI.verifyElementPresent(findTestObject('btnProfileHomeScreen'), 0)
 
 WebUI.takeScreenshot()
 
+WebUI.comment('Hello')
+
