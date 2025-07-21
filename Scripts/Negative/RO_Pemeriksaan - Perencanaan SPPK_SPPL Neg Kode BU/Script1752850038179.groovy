@@ -22,32 +22,30 @@ import org.openqa.selenium.WebElement as WebElement
 import java.time.LocalDate as LocalDate
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 
+// Define today's date in the expected format (adjust format if needed)
 LocalDate today = LocalDate.now()
 
 String formattedDate = today.format(DateTimeFormatter.ofPattern('dd/MM/yyyy'))
 
-println(formattedDate)
-
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'), FailureHandling.STOP_ON_FAILURE)
 WebUI.takeScreenshot()
 
-WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'))
 
-WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
-WebUI.takeScreenshot()
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/radioButtonPerencanaan'))
 
-WebUI.delay(5, FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
-WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false, FailureHandling.STOP_ON_FAILURE)
+WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
 
 WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), '12345678', FailureHandling.STOP_ON_FAILURE)
-WebUI.takeScreenshot()
 
-WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/labelDataNotFound'), 0)
+WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
 WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Perencanaan/labelDataNotFound'), 0)
+
+

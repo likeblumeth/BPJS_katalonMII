@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pemeriksaan - Perencanaan SPPK_SPPL Neg Kode BU</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d5bfd865-0036-4ad7-b354-e99e8367cc72</testCaseGuid>
+</TestCaseEntity>

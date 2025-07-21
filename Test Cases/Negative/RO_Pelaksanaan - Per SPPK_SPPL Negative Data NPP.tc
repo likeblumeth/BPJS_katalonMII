@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RO_Pelaksanaan - Per SPPK_SPPL Negative Data NPP</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f8ed4374-dc38-486b-9c64-62264211449a</testCaseGuid>
+</TestCaseEntity>

@@ -36,10 +36,12 @@ println(todayDate)
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemeriksaan'), FailureHandling.STOP_ON_FAILURE)
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Selamat Datang/p_Pemantauan'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Badan Usaha_btnSearchBU'), FailureHandling.STOP_ON_FAILURE)
+WebUI.takeScreenshot()
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/select_Nama BUKode BU'), '2', 
     true, FailureHandling.STOP_ON_FAILURE)
