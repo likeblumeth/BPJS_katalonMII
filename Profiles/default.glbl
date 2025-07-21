@@ -34,7 +34,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'01732305'</initValue>
+      <initValue>'01732705'</initValue>
       <name>kodeBU_Negative</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

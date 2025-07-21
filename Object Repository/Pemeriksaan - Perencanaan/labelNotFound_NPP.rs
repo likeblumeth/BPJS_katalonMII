@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>labelNotFound_NPP</name>
+   <tag></tag>
+   <elementGuidId>4ce45d7c-b10b-455a-b1ff-9ff4d6e65bac</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//form[@id='frmUsermodal']/div[7]/label[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>label.col-sm-5</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>label >> internal:has-text=&quot;Tidak ditemukan. Cek kembali status pegawai di IHC&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>86563cf5-bc4b-4e59-b35b-d72938f85edc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>col-sm-5</value>
+      <webElementGuid>0530721b-c400-4404-a75b-ffd90c88f1dc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Tidak ditemukan. Cek kembali status pegawai di IHC</value>
+      <webElementGuid>822885b5-7a41-48d5-afe1-8c137974f48d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;frmUsermodal&quot;)/div[@class=&quot;form-group row&quot;]/label[@class=&quot;col-sm-5&quot;]</value>
+      <webElementGuid>19fadc20-df02-482a-bb1b-2c0c7e55415f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='frmUsermodal']/div[7]/label[3]</value>
+      <webElementGuid>dd3d858e-a539-4beb-bb41-488bc4d99eb7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Susunan Tim'])[1]/following::label[2]</value>
+      <webElementGuid>6fc0143c-9461-4dc0-82c9-52ee481471b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='NPP'])[1]/preceding::label[1]</value>
+      <webElementGuid>0fca3e42-395b-4752-a2b3-f59896f5c7e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[7]/label[3]</value>
+      <webElementGuid>187f73c4-5545-4556-8df4-51ef8805b884</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = 'Tidak ditemukan. Cek kembali status pegawai di IHC' or . = 'Tidak ditemukan. Cek kembali status pegawai di IHC')]</value>
+      <webElementGuid>85770e97-3bb7-4965-9109-8e79a0094d05</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

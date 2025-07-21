@@ -98,5 +98,16 @@ WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Object Repository/Pemeriksaan - Perencanaan/button_HapusNPP'))
 
+WebUI.takeScreenshot()
+
+WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxSusunanTim'), '00001')
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnTambahTim'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Pemeriksaan - Perencanaan/labelNotFound_NPP'), 0)
+
+WebUI.takeScreenshot()
+
+
 
 
