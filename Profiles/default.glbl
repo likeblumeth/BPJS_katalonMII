@@ -27,7 +27,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'01732299'</initValue>
+      <initValue>''</initValue>
       <name>kodeBU_Global</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

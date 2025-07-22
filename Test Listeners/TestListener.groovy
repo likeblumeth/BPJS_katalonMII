@@ -17,11 +17,14 @@ class TestListener {
 	@BeforeTestSuite
 	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
 		
+		// Always load the latest Kode BU value into GlobalVariable
+		String currentValue = kodeBUFile.text.trim()
+		int value = Integer.parseInt(currentValue)
+		println "kodeBU Before: " + (currentValue)
+		
 		//Incremental Kode BU for Positive
 	    if (testSuiteContext.getTestSuiteId().contains("Positive Flow Awasrik-1")) {
 			//Increment Kode BU Value in File - Text to Int to Text Again
-			String currentValue = kodeBUFile.text.trim()
-			int value = Integer.parseInt(currentValue)
 	        value += 1
 	        kodeBUFile.text = String.format('%08d', value)
 			
@@ -32,27 +35,31 @@ class TestListener {
 
 		else if (testSuiteContext.getTestSuiteId().contains("Negative Flow")) {
 			//Increment Kode BU Value in File - Text to Int to Text Again
-			String currentValue = kodeBUNegativeFile.text.trim()
-			int value = Integer.parseInt(currentValue)
-			value += 1
-			kodeBUNegativeFile.text = String.format('%08d', value)
+			String currentValueNeg = kodeBUNegativeFile.text.trim()
+			int valueNeg = Integer.parseInt(currentValue)
+			valueNeg += 1
+			kodeBUNegativeFile.text = String.format('%08d', valueNeg)
 			
 			//Convert Updated Int Value to String and Assign to Global Variable
-			GlobalVariable.kodeBU_Negative = String.format('%08d', value)
+			GlobalVariable.kodeBU_Negative = String.format('%08d', valueNeg)
 			println "kodeBU for this suite: " + GlobalVariable.kodeBU_Negative
 		}
 		
 		else if (testSuiteContext.getTestSuiteId().contains("Negative Flow for Approval Kacab")) {
 			//Increment Kode BU Value in File - Text to Int to Text Again
-			String currentValue = kodeBUNegativeFile.text.trim()
-			int value = Integer.parseInt(currentValue)
-			value += 1
-			kodeBUNegativeFile.text = String.format('%08d', value)
+			String currentValueNeg = kodeBUNegativeFile.text.trim()
+			int valueNeg = Integer.parseInt(currentValue)
+			valueNeg += 1
+			kodeBUNegativeFile.text = String.format('%08d', valueNeg)
 			
 			//Convert Updated Int Value to String and Assign to Global Variable
-			GlobalVariable.kodeBU_Negative = String.format('%08d', value)
+			GlobalVariable.kodeBU_Negative = String.format('%08d', valueNeg)
 			println "kodeBU for this suite: " + GlobalVariable.kodeBU_Negative
 		}
+		
+		// Set global variable for all test suites
+		GlobalVariable.kodeBU_Global = String.format('%08d', value)
+		println "[Listener] GlobalVariable.kodeBU_Global set to: " + GlobalVariable.kodeBU_Global
 	
 		KatalonHelper.updateInfo()
 	}
