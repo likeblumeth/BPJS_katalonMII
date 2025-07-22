@@ -35,7 +35,7 @@ try {
 
     WebUI.click(findTestObject('Analisa Data Mandiri/MenuAnalisaDataMandiri'))
 
-    WebUI.setText(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), GlobalVariable.kodeBU_backup)
+    WebUI.setText(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), GlobalVariable.kodeBU_Negative)
 
     println(GlobalVariable.kodeBU_backup)
 

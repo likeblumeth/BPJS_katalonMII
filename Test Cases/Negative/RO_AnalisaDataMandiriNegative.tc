@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Negative 2</description>
    <name>RO_AnalisaDataMandiriNegative</name>
    <tag></tag>
    <comment></comment>

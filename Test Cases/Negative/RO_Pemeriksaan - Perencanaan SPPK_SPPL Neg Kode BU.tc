@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Negative 3</description>
    <name>RO_Pemeriksaan - Perencanaan SPPK_SPPL Neg Kode BU</name>
    <tag></tag>
    <comment></comment>

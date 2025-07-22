@@ -76,7 +76,7 @@ WebUI.waitForElementVisible(findTestObject('Inquiry Data/btnDownloadPDF-Print'),
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonEditTabelRowPerencanaan'), FailureHandling.STOP_ON_FAILURE)
 
-inputTextBoxSPT = ((GlobalVariable.kodeBU_backup + 'SPT') + formattedDate)
+inputTextBoxSPT = ((GlobalVariable.kodeBU_Negative + 'SPT') + formattedDate)
 
 println(inputTextBoxSPT)
 
@@ -108,6 +108,31 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Pemeriksaan - Peren
 
 WebUI.takeScreenshot()
 
+WebUI.comment('Prerequisite untuk Kabag dan Kacab Negative')
 
+WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxEmail'), 'azis.boy@gmail.com')
 
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownMekanismePemeriksaan'), '2', false)
+
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownMetodePemeriksaan'), '2', false)
+
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownJenisTidakPatuh'), '3', false)
+
+WebUI.takeScreenshot()
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonSimpanPerencanaan'))
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
+
+WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 5)
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'))
+
+WebUI.takeScreenshot()
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/buttonKonfirmasiYa'))
+
+WebUI.click(findTestObject('Pemeriksaan - Perencanaan/btnOKProses'))
 

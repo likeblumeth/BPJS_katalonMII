@@ -30,7 +30,7 @@ WebUI.click(findTestObject('Approval - Perencanaan/datepickerPeriodePeriksa'))
 
 WebUI.comment('Gunakan DatePicker Periode')
 
-WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuli'))
+WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
 
@@ -60,7 +60,7 @@ WebUI.waitForElementVisible(tableRow, 10)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/checkboxTableRowPerencanaan'))
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Approval - Perencanaan/select_Tolak'),'2', true)
+WebUI.selectOptionByValue(findTestObject('Object Repository/Approval - Perencanaan/select_Tolak'), '2', true)
 
 WebUI.takeScreenshot()
 
