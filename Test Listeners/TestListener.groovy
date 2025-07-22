@@ -57,10 +57,9 @@ class TestListener {
 			println "kodeBU for this suite: " + GlobalVariable.kodeBU_Negative
 		}
 		
-		// Set global variable for all test suites
+		// Set global variable for all dependent test suites
 		GlobalVariable.kodeBU_Global = String.format('%08d', value)
 		println "[Listener] GlobalVariable.kodeBU_Global set to: " + GlobalVariable.kodeBU_Global
-	
 		KatalonHelper.updateInfo()
 	}
 }

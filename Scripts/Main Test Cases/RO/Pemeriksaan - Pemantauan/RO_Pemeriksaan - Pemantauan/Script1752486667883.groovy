@@ -44,8 +44,8 @@ WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/but
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/select_Nama BUKode BU'), '2', 
     true, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/input_Opsi Pencarian_paramCariBU'), GlobalVariable.kodeBU_Global, 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/input_Opsi Pencarian_paramCariBU'), GlobalVariable.kodeBU_Global,
+	FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Pemantauan/Page_Awasrik Pemantauan/button_Cari'), FailureHandling.STOP_ON_FAILURE)
 

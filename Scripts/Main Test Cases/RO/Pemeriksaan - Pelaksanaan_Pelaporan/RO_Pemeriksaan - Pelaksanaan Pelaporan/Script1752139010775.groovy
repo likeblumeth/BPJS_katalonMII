@@ -42,8 +42,10 @@ try {
 
     WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false, FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_Global, 
-        FailureHandling.STOP_ON_FAILURE)
+	println(GlobalVariable.kodeBU_Global)
+
+	WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), GlobalVariable.kodeBU_Global,
+		FailureHandling.STOP_ON_FAILURE)
 
     WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
 
