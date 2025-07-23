@@ -73,7 +73,9 @@ TestObject dynamicCell = new TestObject('dynamicCell')
 
 dynamicCell.addProperty('xpath', ConditionType.EQUALS, dynamicXpath)
 
-if (WebUI.verifyElementNotPresent(dynamicCell, 3)) {
+CellData = WebUI.getText(dynamicCell)
+
+if (CellData != GlobalVariable.kodeBU_Global) {
     WebUI.scrollToElement(findTestObject('Sanksi/buttonNextPageTabelSanksi'), 0)
 
     WebUI.click(findTestObject('Sanksi/buttonNextPageTabelSanksi'), FailureHandling.STOP_ON_FAILURE)
