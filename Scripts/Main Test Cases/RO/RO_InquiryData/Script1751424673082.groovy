@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import pemadananData.IncrementingDataKodeBU as IncrementingDataKodeBU
 
 WebUI.comment('Project Path Sudah Dinamis untuk Upload File')
 
@@ -59,6 +60,8 @@ WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'))
 
 WebUI.comment('Upload File Dinamis sesuai Project Masing2')
+
+CustomKeywords.'pemadananData.IncrementingDataKodeBU.readAndIncrementExcelCell'('inquiry', 1, 0)
 
 WebUI.uploadFile(findTestObject('Inquiry Data/btnUploadFileInquiry'), filepath)
 
