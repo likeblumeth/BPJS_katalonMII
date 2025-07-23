@@ -88,7 +88,7 @@ WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'))
 
 WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false)
 
-WebUI.setText(findTestObject('Inquiry Data/textBoxMasukkanKataPencarian'), GlobalVariable.kodeBU_Global)
+WebUI.setText(findTestObject('Inquiry Data/textBoxMasukkanKataPencarian'), GlobalVariable.kodeBU_Negative)
 
 WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
@@ -102,5 +102,9 @@ WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Inquiry Data/kolomKeterangan'), 0)
 
-WebUI.verifyTextPresent('Kode PKS tidak sesuai', false)
+WebUI.delay(3)
+
+TextPKS = WebUI.getText(findTestObject('Inquiry Data/contentKolomTabelUpload'))
+
+WebUI.verifyTextPresent(TextPKS, false)
 

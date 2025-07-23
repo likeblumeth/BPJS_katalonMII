@@ -17,6 +17,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Negative/RO_InquiryDataNegative</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>4ebedf27-1417-4665-917e-5ad043b39076</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>ac2e06fb-d01c-49c4-946f-8da4d8401d55</guid>

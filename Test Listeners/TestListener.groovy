@@ -36,7 +36,7 @@ class TestListener {
 		else if (testSuiteContext.getTestSuiteId().contains("Negative Flow")) {
 			//Increment Kode BU Value in File - Text to Int to Text Again
 			String currentValueNeg = kodeBUNegativeFile.text.trim()
-			int valueNeg = Integer.parseInt(currentValue)
+			int valueNeg = Integer.parseInt(currentValueNeg)
 			valueNeg += 1
 			kodeBUNegativeFile.text = String.format('%08d', valueNeg)
 			
@@ -48,7 +48,7 @@ class TestListener {
 		else if (testSuiteContext.getTestSuiteId().contains("Negative Flow for Approval Kacab")) {
 			//Increment Kode BU Value in File - Text to Int to Text Again
 			String currentValueNeg = kodeBUNegativeFile.text.trim()
-			int valueNeg = Integer.parseInt(currentValue)
+			int valueNeg = Integer.parseInt(currentValueNeg)
 			valueNeg += 1
 			kodeBUNegativeFile.text = String.format('%08d', valueNeg)
 			
@@ -59,7 +59,7 @@ class TestListener {
 		
 		// Set global variable for all dependent test suites
 		GlobalVariable.kodeBU_Global = String.format('%08d', value)
-		println "[Listener] GlobalVariable.kodeBU_Global set to: " + GlobalVariable.kodeBU_Global
+		println "Kode BU Global For Postive Case: " + GlobalVariable.kodeBU_Global
 		KatalonHelper.updateInfo()
 	}
 }

@@ -6,4 +6,17 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>6638c41e-9802-4364-b489-6545ded7ee2f</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4ebedf27-1417-4665-917e-5ad043b39076</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4ebedf27-1417-4665-917e-5ad043b39076</id>
+      <masked>false</masked>
+      <name>TextPKS</name>
+   </variable>
 </TestCaseEntity>

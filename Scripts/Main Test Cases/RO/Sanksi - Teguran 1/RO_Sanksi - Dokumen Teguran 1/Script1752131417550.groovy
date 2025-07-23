@@ -73,11 +73,23 @@ TestObject dynamicCell = new TestObject('dynamicCell')
 
 dynamicCell.addProperty('xpath', ConditionType.EQUALS, dynamicXpath)
 
-WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
+if (WebUI.verifyElementNotPresent(dynamicCell, 3)) {
+    WebUI.scrollToElement(findTestObject('Sanksi/buttonNextPageTabelSanksi'), 0)
 
-WebUI.scrollToElement(dynamicCell, 0)
+    WebUI.click(findTestObject('Sanksi/buttonNextPageTabelSanksi'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
+    WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.scrollToElement(dynamicCell, 0)
+
+    WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
+} else {
+    WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.scrollToElement(dynamicCell, 0)
+
+    WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
+}
 
 WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 0, FailureHandling.STOP_ON_FAILURE)
 

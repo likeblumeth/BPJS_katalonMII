@@ -32,11 +32,13 @@ WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'J
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Pemeriksaan - Perencanaan/sideMenuExpandPemeriksaan'), FailureHandling.STOP_ON_FAILURE)
+
 WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/radiobuttonPelaksanaanPelaporan'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Inquiry Data/btnMorePilihBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
+
 WebUI.takeScreenshot()
 
 WebUI.delay(5, FailureHandling.STOP_ON_FAILURE)
@@ -44,6 +46,7 @@ WebUI.delay(5, FailureHandling.STOP_ON_FAILURE)
 WebUI.selectOptionByValue(findTestObject('Inquiry Data/dropdownPilihOpsiPencarianBadanUsaha'), '2', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Pemeriksaan - Perencanaan/textboxPencarianBadanUsaha'), '12345678', FailureHandling.STOP_ON_FAILURE)
+
 WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'), FailureHandling.STOP_ON_FAILURE)
@@ -51,3 +54,4 @@ WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'), FailureHandling.ST
 WebUI.verifyElementPresent(findTestObject('Pemeriksaan - Pelaksanaan - Pelaporan/labelDataNotFound'), 0)
 
 WebUI.takeScreenshot()
+

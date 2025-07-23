@@ -37,7 +37,7 @@ try {
 
     WebUI.setText(findTestObject('Analisa Data Mandiri/textboxKodeBU_PKS'), GlobalVariable.kodeBU_Negative)
 
-    println(GlobalVariable.kodeBU_backup)
+    println(GlobalVariable.kodeBU_Negative)
 
     WebElement btnCari = WebUiCommonHelper.findWebElement(findTestObject('Pengawasan - Canvassing/btnCariGreen'), 10)
 

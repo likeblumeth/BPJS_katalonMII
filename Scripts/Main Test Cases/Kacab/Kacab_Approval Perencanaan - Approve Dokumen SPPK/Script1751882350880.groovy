@@ -51,9 +51,25 @@ WebUI.switchToWindowIndex(1)
 
 WebUI.takeFullPageScreenshot()
 
-WebUI.closeWindowIndex(1)
+WebUI.closeBrowser(FailureHandling.STOP_ON_FAILURE)
 
-WebUI.switchToWindowIndex(0)
+WebUI.callTestCase(findTestCase('Common Test Cases/LoginKacab'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Approval - Perencanaan/buttonExpandApprovalPerencanaan'))
+
+WebUI.click(findTestObject('Approval - Perencanaan/radioButtonApproveDokumenSPPK_SPPL'))
+
+WebUI.click(findTestObject('Approval - Perencanaan/datepickerPeriodePeriksa'))
+
+WebUI.comment('Gunakan DatePicker Periode')
+
+WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'))
+
+WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false)
+
+WebUI.click(findTestObject('Pengawasan - Canvassing/btnCariGreen'))
+
+WebUI.takeScreenshot()
 
 WebUI.waitForElementVisible(tableRow, 10)
 
