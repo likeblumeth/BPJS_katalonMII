@@ -39,7 +39,7 @@ WebUI.click(findTestObject('Sanksi/radiobuttonSanksiTeguran1'), FailureHandling.
 
 WebUI.click(findTestObject('Inquiry Data/Periode/parentdatePickerPeriode'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Inquiry Data/Periode/btnDatePickerJuly'), FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'dynamicDateForTCsanksi.dynamicDate.selectCurrentMonthInDatePicker'()
 
 WebUI.selectOptionByValue(findTestObject('Pemeriksaan - Perencanaan/dropdownSelectKategori'), '4', false, FailureHandling.STOP_ON_FAILURE)
 

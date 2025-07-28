@@ -41,34 +41,34 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
 
 class IncrementingDataKodeBU {
-	
-	@Keyword
-	 def String readAndIncrementExcelCell(String sheetName = "inquiry", int rowIdx = 0, int colIdx = 0) {
-        String filePath = RunConfiguration.getProjectDir() + "/Pemadanan Data.xlsx"
 
-	        // Initialize Excel input
-	        FileInputStream fis = new FileInputStream(filePath)
-	        Workbook workbook = new XSSFWorkbook(fis)
-	        Sheet sheet = workbook.getSheet(sheetName)
-	        Row row = sheet.getRow(rowIdx)
-	        Cell cell = row.getCell(colIdx)
-	
-	        // Read, increment, format
-	        String valueStr = cell.getStringCellValue().trim()
-			println (valueStr)
-	        int valueInt = Integer.parseInt(valueStr)
-	        valueInt += 1
-	        String newValue = String.format('%08d', valueInt)
-			println (newValue)
-	
-	        // Write back to Excel
-	        cell.setCellValue(newValue)
-	        fis.close()
-	        FileOutputStream fos = new FileOutputStream(filePath)
-	        workbook.write(fos)
-	        fos.close()
-	        workbook.close()
-	
-	        return newValue
-		}
+	@Keyword
+	def String readAndIncrementExcelCell(String sheetName = "inquiry", int rowIdx = 0, int colIdx = 0) {
+		String filePath = RunConfiguration.getProjectDir() + "/Pemadanan Data.xlsx"
+
+		// Initialize Excel input
+		FileInputStream fis = new FileInputStream(filePath)
+		Workbook workbook = new XSSFWorkbook(fis)
+		Sheet sheet = workbook.getSheet(sheetName)
+		Row row = sheet.getRow(rowIdx)
+		Cell cell = row.getCell(colIdx)
+
+		// Read, increment, format
+		String valueStr = cell.getStringCellValue().trim()
+		println("Old Value: " + valueStr)
+		int valueInt = Integer.parseInt(valueStr)
+		valueInt += 1
+		String newValue = String.format('%08d', valueInt)
+		println ("New Value: " + newValue)
+
+		// Write back to Excel
+		cell.setCellValue(newValue)
+		fis.close()
+		FileOutputStream fos = new FileOutputStream(filePath)
+		workbook.write(fos)
+		fos.close()
+		workbook.close()
+
+		return newValue
+	}
 }

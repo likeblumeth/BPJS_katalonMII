@@ -59,7 +59,7 @@ WebUI.click(findTestObject('Inquiry Data/btnCariBadanUsaha'))
 
 WebUI.click(findTestObject('Inquiry Data/btnConfirmPilihBadanUsaha'))
 
-WebUI.comment('Upload File Dinamis sesuai Project Masing2')
+WebUI.comment('Upload File Dinamis Setelah Increment Kode')
 
 CustomKeywords.'pemadananData.IncrementingDataKodeBU.readAndIncrementExcelCell'('inquiry', 1, 0)
 

@@ -17,10 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.comment('Done Approval Kabag dan Kacab Dahulu')
+
 WebUI.callTestCase(findTestCase('Common Test Cases/LoginRO'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
     FailureHandling.STOP_ON_FAILURE)
-
-WebUI.comment('Done Approval Kabag dan Kacab Dahulu')
 
 if (WebUI.verifyElementPresent(findTestObject('Analisa Data Mandiri/popupLabelPerhatian'), 3, FailureHandling.OPTIONAL)) {
     WebUI.click(findTestObject('Analisa Data Mandiri/btnOkPopup'))
