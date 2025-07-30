@@ -64,33 +64,40 @@ WebUI.switchToWindowIndex(0)
 WebUI.takeScreenshot()
 
 //Get Dynamic Object untuk Pilih Tabel By Global Variable
-String dynamicXpath = ('//table[@id=\'tblCari\']//tbody//td[contains(@class,\'dt-type-numeric\') and text()=\'' + GlobalVariable.kodeBU_Global) + 
-'\']'
-
+String dynamicXpath = ('//table[@id=\'tblCari\']//tbody//td[contains(@class,\'dt-type-numeric\') and text()=\'' + GlobalVariable.kodeBU_Global) + '\']'
 println(dynamicXpath)
 
 TestObject dynamicCell = new TestObject('dynamicCell')
-
 dynamicCell.addProperty('xpath', ConditionType.EQUALS, dynamicXpath)
 
-CellData = WebUI.getText(dynamicCell)
+TestObject nextButton = findTestObject('Sanksi/buttonNextPageTabelSanksi')
 
-if (CellData != GlobalVariable.kodeBU_Global) {
-    WebUI.scrollToElement(findTestObject('Sanksi/buttonNextPageTabelSanksi'), 0)
+boolean found = false
 
-    WebUI.click(findTestObject('Sanksi/buttonNextPageTabelSanksi'), FailureHandling.STOP_ON_FAILURE)
+while (true) {
+    if (WebUI.verifyElementPresent(dynamicCell, 5, FailureHandling.OPTIONAL)) {
+        // Found the element
+        WebUI.waitForElementClickable(dynamicCell, 10)
+        WebUI.scrollToElement(dynamicCell, 0)
+        WebUI.click(dynamicCell)
+        found = true
+        break
+    } else {
+        // Check if next button is disabled or not present
+        if (!WebUI.verifyElementClickable(nextButton, FailureHandling.OPTIONAL)) {
+            println("Element not found and no more pages.")
+            break
+        }
 
-    WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
+        // Scroll and click next page
+        WebUI.scrollToElement(nextButton, 0)
+        WebUI.click(nextButton)
+        WebUI.delay(1) // small wait for table to refresh
+    }
+}
 
-    WebUI.scrollToElement(dynamicCell, 0)
-
-    WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
-} else {
-    WebUI.waitForElementClickable(dynamicCell, 10, FailureHandling.STOP_ON_FAILURE)
-
-    WebUI.scrollToElement(dynamicCell, 0)
-
-    WebUI.click(dynamicCell, FailureHandling.STOP_ON_FAILURE)
+if (!found) {
+   println("Element with value '${GlobalVariable.kodeBU_Global}' not found in any page.")
 }
 
 WebUI.scrollToElement(findTestObject('Pemeriksaan - Perencanaan/buttonAjukan'), 0, FailureHandling.STOP_ON_FAILURE)
